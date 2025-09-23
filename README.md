@@ -42,5 +42,5 @@
     - 中文
     - English
 
-![大致架構](/produce.png)
+![大致架構](/public/produce.png)
 
