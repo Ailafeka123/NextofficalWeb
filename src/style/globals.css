@@ -1,0 +1,38 @@
+@import "tailwindcss";
+/* sky 50 100 200  stone 950 900 800 */
+:root {
+  --background: #ffffff;
+  --background-2: oklch(95.1% 0.026 236.824);
+  --background-3:   oklch(90.1% 0.058 230.902);
+  --foreground: oklch(14.7% 0.004 49.25);
+  --foreground-2:oklch(21.6% 0.006 56.043);
+  --foreground-3:oklch(26.8% 0.007 34.298);
+  --menuHeight:80px;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: oklch(26.8% 0.007 34.298);
+    --background-2: oklch(21.6% 0.006 56.043);
+    --background-3:   oklch(14.7% 0.004 49.25);
+    --foreground: #ffffff;
+    --foreground-2:oklch(95.1% 0.026 236.824);
+    --foreground-3:oklch(90.1% 0.058 230.902);
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100svh;
+  margin-top: var(--menuHeight);
+  padding:16px;
+}

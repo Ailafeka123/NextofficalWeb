@@ -1,0 +1,13 @@
+{
+    "menu":{
+        "index":"首頁",
+        "aboutUs":"關於我們",
+        "products":"產品介紹",
+        "blog":"部落格",
+        "contact":"聯繫我們"
+    },
+    "index":{
+    },
+    "aboutus":{
+    }
+}

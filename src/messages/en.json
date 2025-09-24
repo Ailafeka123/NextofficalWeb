@@ -1,0 +1,13 @@
+{
+     "menu":{
+        "index":"Index",
+        "aboutUs":"About Us",
+        "products":"Products",
+        "blog":"Blog",
+        "contact":"Contact Us"
+    },
+    "index":{
+    },
+    "aboutus":{
+    }
+}
