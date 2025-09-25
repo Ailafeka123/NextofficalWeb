@@ -1,13 +1,30 @@
 {
     "menu":{
         "index":"首頁",
+        "introduction":"簡介",
+        "productsList":"產品簡介",
+        "news":"最新消息",
+
         "aboutUs":"關於我們",
+        "brandStory":"品牌故事",
+        "ourTeam":"團隊介紹",
+        "milestones":"里程碑",
+        "coreValues":"核心價值",
+
         "products":"產品介紹",
         "blog":"部落格",
-        "contact":"聯繫我們"
+        "contact":"聯繫我們",
+        "lang":"語系"
     },
     "index":{
     },
     "aboutus":{
+    },
+    "footer":{
+        "contact":"聯繫方法",
+        "phone":"電話號碼",
+        "email":"信箱",
+        "contactHours":"聯繫時間",
+        "content":"本網站是以Next製作，並放在github與vercel上使用，僅供用於展示"
     }
 }

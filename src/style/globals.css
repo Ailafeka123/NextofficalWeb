@@ -34,5 +34,8 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   min-height: 100svh;
   margin-top: var(--menuHeight);
-  padding:16px;
+}
+main{
+  padding: 16px;
+  min-height: 100svh;
 }

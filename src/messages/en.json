@@ -1,13 +1,30 @@
 {
      "menu":{
         "index":"Index",
+        "introduction":"Introduction",
+        "productsList":"Products",
+        "news":"News",
+
         "aboutUs":"About Us",
+        "brandStory":"Brand Story",
+        "ourTeam":"Our Team",
+        "milestones":"Milestones",
+        "coreValues":"Core Values",
+
         "products":"Products",
         "blog":"Blog",
-        "contact":"Contact Us"
+        "contact":"Contact Us",
+        "lang":"Language"
     },
     "index":{
     },
     "aboutus":{
+    },
+    "footer":{
+        "contact":"How to Contact",
+        "phone":"Phone Number",
+        "email":"Email",
+        "contactHours":"Hours of Availability",
+        "content":"This website is built with Next.js and hosted on GitHub and Vercel, for demonstration purposes only."
     }
 }

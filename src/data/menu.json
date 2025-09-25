@@ -1,0 +1,63 @@
+    [
+        {
+            "label":"index",
+            "href":"/",
+            "child":[
+                {
+                    "label":"introduction",
+                    "tag":"#"
+                },
+
+                {
+                    "label":"productsList",
+                    "tag":"#"
+                },
+
+                {
+                    "label":"news",
+                    "tag":"#"
+                }
+            ]
+        },
+
+        {
+            "label":"aboutUs",
+            "href":"/aboutUs",
+            "child":[
+                 {
+                    "label":"brandStory",
+                    "tag":"#"
+                },
+
+                 {
+                    "label":"ourTeam",
+                    "tag":"#"
+                },
+
+                 {
+                    "label":"milestones",
+                    "tag":"#"
+                },
+
+                 {
+                    "label":"coreValues",
+                    "tag":"#"
+                }
+            ]
+        },
+        
+        {
+            "label":"products",
+            "href":"/products"
+        },
+        
+        {
+            "label":"blog",
+            "href":"/blog"
+        },
+
+        {
+            "label":"contact",
+            "href":"/contact"
+        }
+    ]
