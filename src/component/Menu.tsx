@@ -1,5 +1,5 @@
 "use client";
-import { useState,useEffect,useContext } from "react";
+import { useState,useContext } from "react";
 import { Link } from "@/i18n/navigation";
 import { usePathname } from "@/i18n/navigation";
 import menuData from "@/data/menu.json";
@@ -51,7 +51,6 @@ export default function Menu(){
         }
         
     }
-    console.log("menu刷新")
     return (
         <header id="menuHeader" className="flex flex-col md:flex-row gap-[8px] items-center justify-center md:justify-between w-full 
         fixed top-0 left-0 z-999 px-[16px] h-[var(--menuHeight)] border-b-1 bg-[var(--background)]" onMouseLeave={()=>{clickMenuItemButton()}}>
@@ -112,15 +111,12 @@ export default function Menu(){
                 </ul>
 
                 <div className={`flex flex-col md:flex-row items-center justify-center text-center gap-[8px] px-[8px] w-full md:w-auto
-                    transition-all duration-500 ease-in-out overflow-hidden
-                    `}
-                >
+                    transition-all duration-500 ease-in-out overflow-hidden`}>
                     <div className="md:hidden block mb-[8px] hover:bg-[var(--background-2)] cursor-pointer p-[8px] rounded-md w-11/12" onClick={()=>{clickMenuItemButton(5)}} >
                         <p>{t("lang")}</p>
                     </div>
 
-                    <div className={`grid ${openMenuItem[menuData.length]? "grid-rows-[1fr_1fr] gap-[8px]" : "grid-rows-[0fr_0fr]"}  md:grid-rows-1 md:grid-cols-2   md:gap-[8px]  overflow-hidden
-                     transition-all duration-300 ease-out w-11/12 md:w-auto `}>
+                    <div className={`grid ${openMenuItem[menuData.length]? "grid-rows-[1fr_1fr] gap-[8px]" : "grid-rows-[0fr_0fr]"}  md:grid-rows-1 md:grid-cols-2   md:gap-[8px]  overflow-hidden transition-all duration-300 ease-out w-11/12 md:w-auto `}>
                         <Link href={pathName} locale={"zh"}  className={` overflow-hidden md:p-[8px] rounded-md ${openMenuItem[5]?"p-[8px]":"p-0"} ${locale === "zh" ?"text-[var(--foreground-3)]  cursor-default":"hover:text-[var(--foreground-2)] hover:bg-[var(--background-2)] "}`}>
                             中文
                         </Link>

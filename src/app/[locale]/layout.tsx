@@ -6,6 +6,7 @@ import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import Footer from "@/component/Footer";
+import ChangeDarkMode from "@/component/ChangeDarkMode";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -58,6 +59,7 @@ export default async function RootLayout({
         <NextIntlClientProvider>
           <Menu/>
           {children}
+          <ChangeDarkMode/>
           <Footer/>
         </NextIntlClientProvider>
       </body>
