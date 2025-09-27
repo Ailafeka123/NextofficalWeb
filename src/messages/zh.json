@@ -17,6 +17,9 @@
         "lang":"語系"
     },
     "index":{
+        "introduction":"簡介",
+        "productsList":"產品簡介",
+        "news":"最新消息"
     },
     "aboutus":{
     },

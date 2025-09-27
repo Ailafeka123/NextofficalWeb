@@ -41,7 +41,7 @@ export default function ChangeDarkMode(){
 
 
     return (
-        <div className={`fixed right-1 top-[50%] -translate-y-[50%]  ${darkModeOpen? darkMode?"size-20 rotate-540":"size-20  rotate-360":"size-15  translate-x-[50%]"}   grid grid-rows-1 grid-cols-3  transition-all duration-500 ease-in-out`} 
+        <div className={`fixed right-1 top-[50%] -translate-y-[50%]  ${darkModeOpen? darkMode?"size-20 rotate-540":"size-20  rotate-360":"size-15  translate-x-[50%]"}   grid grid-rows-1 grid-cols-3  transition-all duration-500 ease-in-out z-990`} 
         onClick={()=>{openModeChose()}}>
             {/* <h2>這是mode</h2> */}
             {/* <div className="grid grid-cols-1 grid-rows-1">
@@ -52,14 +52,14 @@ export default function ChangeDarkMode(){
                 
             </div>
             <div className={`col-span-3 col-start-1 row-start-1 flex items-center justify-center w-full h-full`}>
-                <Image className={` mx-auto ${darkModeOpen?"size-0":"block"}`} src={darkMode?"/DarkAndLight/moon_dark.svg":"/DarkAndLight/sum_light.svg"} width={40} height={40} alt="darkModeIcon"></Image>
+                <Image className={` mx-auto ${darkModeOpen?"size-0":"block cursor-pointer"}`} src={darkMode?"/DarkAndLight/moon_dark.svg":"/DarkAndLight/sum_light.svg"} width={40} height={40} alt="darkModeIcon"></Image>
             </div>
 
             <div className={`col-span-1 col-start-1 row-start-1 flex items-center justify-center ${darkModeOpen?"flex":"hidden"} ${darkMode?"rotate-180":""}`}>
-                <Image src={darkMode?"/DarkAndLight/moon_dark.svg":"/DarkAndLight/moon_light.svg"} width={40} height={40} alt="darkModeIcon" onClick={()=>{changeDarkModeClick(true)}}></Image>
+                <Image className="cursor-pointer" src={darkMode?"/DarkAndLight/moon_dark.svg":"/DarkAndLight/moon_light.svg"} width={40} height={40} alt="darkModeIcon" onClick={()=>{changeDarkModeClick(true)}}></Image>
             </div>
             <div className="col-span-1 col-start-3 row-start-1 flex items-center justify-center">
-                <Image src={darkMode?"/DarkAndLight/sum_dark.svg":"/DarkAndLight/sum_light.svg"} width={40} height={40} alt="darkModeIcon" onClick={()=>{changeDarkModeClick(false)}}></Image>
+                <Image className="cursor-pointer" src={darkMode?"/DarkAndLight/sum_dark.svg":"/DarkAndLight/sum_light.svg"} width={40} height={40} alt="darkModeIcon" onClick={()=>{changeDarkModeClick(false)}}></Image>
             </div>
         </div>
     )

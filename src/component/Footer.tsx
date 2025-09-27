@@ -12,7 +12,11 @@ export default function Footer(){
             <div className=" flex flex-col gap-2 items-center text-center px-[16px]">
                 <p>{t("content")}</p>
                 <p>Copyright© 劉星緯 2025</p>
+                <p>
+                    本網站使用 <a href="https://fonts.google.com/icons" target="_black">GoogleIcon</a> 以及 <a href="https://swiperjs.com/" target="_black">Swiper插件</a> 
+                </p>
             </div>
+            
         </footer>
     )
 }

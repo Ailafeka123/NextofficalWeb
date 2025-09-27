@@ -18,6 +18,9 @@ export function DarkModeProvider({children}:{children:ReactNode}){
     const [darkModeContextLoading,setDarkModeContextLoading] = useState<boolean>(false)
     useEffect(() => {
         const saved:boolean = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if(saved){
+            document.documentElement.classList.add("dark");
+        }
         setDarkModeContext(saved);
         setDarkModeContextLoading(true);
     }, []);

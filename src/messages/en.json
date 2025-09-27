@@ -17,6 +17,9 @@
         "lang":"Language"
     },
     "index":{
+        "introduction":"Introduction",
+        "productsList":"Products",
+        "news":"News"
     },
     "aboutus":{
     },

@@ -5,17 +5,17 @@
             "child":[
                 {
                     "label":"introduction",
-                    "tag":"#"
+                    "tag":"#introduction"
                 },
 
                 {
                     "label":"productsList",
-                    "tag":"#"
+                    "tag":"#productsList"
                 },
 
                 {
                     "label":"news",
-                    "tag":"#"
+                    "tag":"#news"
                 }
             ]
         },
