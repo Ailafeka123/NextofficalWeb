@@ -26,22 +26,22 @@
             "child":[
                  {
                     "label":"brandStory",
-                    "tag":"#"
+                    "tag":"#brandStory"
                 },
 
                  {
                     "label":"ourTeam",
-                    "tag":"#"
+                    "tag":"#ourTeam"
                 },
 
                  {
                     "label":"milestones",
-                    "tag":"#"
+                    "tag":"#milestones"
                 },
 
                  {
                     "label":"coreValues",
-                    "tag":"#"
+                    "tag":"#coreValues"
                 }
             ]
         },

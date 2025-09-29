@@ -103,7 +103,7 @@ export default function Menu(){
                         }
                         return (
                             <li key={`${index.label}-${key}`} className="relative w-full md:w-auto flex flex-col items-center justify-center gap-[8px] ">
-                                <Link  className="block hover:text-[var(--foreground-2)] hover:bg-[var(--background-2)] p-[8px] rounded-md w-11/12 md:w-auto" href={index.href} locale={locale} onClick={()=>{clickMenuButton(false)}}>{t(index.label)}</Link>
+                                <Link  className="block hover:text-[var(--foreground-2)] hover:bg-[var(--background-2)] p-[8px] rounded-md w-11/12 md:w-auto" href={index.href} locale={locale} onClick={()=>{clickMenuButton(false); clickMenuItemButton();}}>{t(index.label)}</Link>
                             </li>
                         )
                     })

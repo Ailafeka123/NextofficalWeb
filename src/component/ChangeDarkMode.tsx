@@ -44,10 +44,7 @@ export default function ChangeDarkMode(){
         <div className={`fixed right-1 top-[50%] -translate-y-[50%]  ${darkModeOpen? darkMode?"size-20 rotate-540":"size-20  rotate-360":"size-15  translate-x-[50%]"}   grid grid-rows-1 grid-cols-3  transition-all duration-500 ease-in-out z-990`} 
         onClick={()=>{openModeChose()}}>
             {/* <h2>這是mode</h2> */}
-            {/* <div className="grid grid-cols-1 grid-rows-1">
-                <div className="col-start-1 row-start-1 size-12 rounded-full border-4 border-gray-100 dark:border-gray-700"></div>
-                <div className="col-start-1 row-start-1 size-12 rounded-full border-4 border-amber-500 mask-conic-from-75% mask-conic-to-100% dark:border-amber-400"></div>
-            </div> */}
+            
             <div className="col-span-3 col-start-1 row-start-1  border-30  rounded-full border-[var(--background-3)]">
                 
             </div>
