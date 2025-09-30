@@ -50,6 +50,28 @@
         "coreValuesContext2":"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour"
 
     },
+
+    "contact":{
+        "contactUs":"Contact Us(僅供參考)",
+        "name":"Name",
+        "email":"Email",
+        "phone":"Phone Number",
+        "title":"Subject",
+        "context":"Your Message",
+        "sub":"submit",
+
+        "error1":"This field is required",
+
+        "map":"Map",
+
+        "information":"Contact Information",
+        "contactPosition":"Address:It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout",
+        "contactPhone":"Telephone:0917-871-819",
+        "contactEmail":"Email:ailafeka@gmail.com",
+        "contactTime":"Business Hours:Mon–Fri: 09:00–18:00",
+        "contactLinkText":"Related Links:"
+    },
+
     "footer":{
         "contact":"How to Contact",
         "phone":"Phone Number",

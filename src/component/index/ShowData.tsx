@@ -1,5 +1,6 @@
 "use client";
 import { useState,useEffect,useRef } from "react";
+import { isNull } from "util";
 
 export default function ShowData(){
     const [see,setSee] = useState<boolean>(false);
@@ -8,6 +9,10 @@ export default function ShowData(){
     const complate = useRef<boolean>(false);
     // 初始化 放入監聽
     useEffect(()=>{
+        const temp = seeRef.current;
+        if(temp === null){
+            return;
+        }
         const observe = new IntersectionObserver(
             (observe,obs)=>{
                 observe.forEach(index=>{

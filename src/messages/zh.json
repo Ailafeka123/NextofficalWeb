@@ -51,6 +51,30 @@
         "coreValuesContext2":"者民念自米、送買祖害寺抱着豆右像肖加泉辛寺，用借耳手您鼻息巾記止，入寫明良冒麼鳥消完，聲貝急媽抱未害？欠躲老男裝夕波同；姐才泉日這走冰雨弓馬力上，古真書吧雪。"
 
     },
+    "contact":{
+        "contactUs":"聯繫我們(僅供參考)",
+        "name":"姓名",
+        "email":"電子郵件",
+        "phone":"電話號碼",
+        "title":"主題",
+        "context":"訊息內容",
+        "sub":"提交",
+
+        "error1":"表單不得為空",
+
+        "map":"地圖",
+
+        "information":"聯繫資訊",
+        "contactPosition":"地址:相止坐登玩紅荷拉肉你出這二園借入珠忍",
+        "contactPhone":"電話:0917-871-819",
+        "contactEmail":"email:ailafeka@gmail.com",
+        "contactTime":"聯繫時間: 平日: 09:00–18:00",
+        "contactLinkText":"相關連結:"
+    },
+
+
+
+
     "footer":{
         "contact":"聯繫方法",
         "phone":"電話號碼",
