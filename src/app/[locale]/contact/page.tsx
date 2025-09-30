@@ -1,7 +1,7 @@
 import ContactForm from "@/component/contact/contactForm";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-export default function contact(){
+export default function Contact(){
     const t = useTranslations("contact");
     return (
         <main className="flex flex-col w-full items-center justify-start py-[32px] gap-[32px]">
