@@ -1,0 +1,17 @@
+{
+    "index":{
+        "title":"Aila-Official-Index"
+    },
+    "aboutUs":{
+        "title":"Aila-Official-AboutUs"
+    },
+    "blog":{
+        "title":"Aila-Official-News"
+    },
+    "products":{
+        "title":"Aila-Official-Products"
+    },
+    "contact":{
+        "title":"Aila-Official-ContactUS"
+    }
+}

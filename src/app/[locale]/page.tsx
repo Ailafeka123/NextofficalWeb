@@ -1,6 +1,29 @@
 import { useTranslations } from "next-intl";
 import ScrollDiv from "@/component/index/ScrollDiv";
 import ShowData from "@/component/index/ShowData";
+import NewsList from "@/component/index/NewsList";
+import type { Metadata } from "next";
+
+type Props = {
+  params: Promise<{ locale: string }>;
+};
+
+async function loadMessages(locale: string) {
+  return (await import(`@/data/${locale}/meta.json`)).default;
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata>{
+  const { locale } = await params;
+  const messages = await loadMessages(locale);
+  return{
+    title: messages.index.title,
+    openGraph:{
+      title:messages.index.title,
+    }
+  }
+}
+
+
 export default function Home() {
   const t = useTranslations("index");
   const ProductCard = t.raw("productsCards");
@@ -17,10 +40,10 @@ export default function Home() {
         <ShowData/>
       </article>
 
-      <article id="productsList" className="scroll-mt-[var(--menuHeight)] py-[16px] w-full flex flex-col items-center justify-start  lg:w-min-[1024px] lg:w-10/12 ">
+      <article id="productsList" className="scroll-mt-[var(--menuHeight)] py-[16px] w-full flex flex-col items-center justify-start  lg:w-min-[1024px] lg:w-10/12 px-[16px] lg:p-0">
         <h2 className="text-2xl my-[8px]">{t("productsList")}</h2>
         
-        <section className="flex flex-col md:flex-row w-full md:w-10/12 items-center justify-between gap-[16px] md:gap-0 p-[8px] md:p-0" >
+        <section className="flex flex-col md:flex-row w-full  items-center justify-between gap-[16px] md:gap-0 p-[8px] md:p-0" >
 
           {ProductCard.map((index:{imgLink:string,description:string,moreLink:string,moreText:string},key:number)=>{
             return(
@@ -45,11 +68,11 @@ export default function Home() {
         </section>
       </article>
 
-      <article id="news" className=" scroll-mt-[var(--menuHeight)] md:p-[16px] flex flex-col w-full items-center justify-center lg:w-min-[1024px] lg:w-10/12">
+      <article id="news" className=" scroll-mt-[var(--menuHeight)] flex flex-col w-full items-center justify-center lg:w-min-[1024px] lg:w-10/12">
         <h2 className="text-2xl">{t("news")}</h2>
-        <div className="w-full  h-svh  m-[16px] bg-[var(--background-2)]">
-        </div>
+        <NewsList/>
       </article>
+
     </main>
   );
 }

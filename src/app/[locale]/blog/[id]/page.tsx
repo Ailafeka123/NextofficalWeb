@@ -1,5 +1,4 @@
 
-
 import type { Metadata } from "next";
 
 type Props = {
@@ -20,14 +19,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata>{
   }
 }
 
-import { useTranslations } from "next-intl";
-import NewsList from "@/component/blogs/NewsList";
-export default function Blog(){
-  const t = useTranslations("blog")
-  return (
-      <main className="flex flex-col items-center justify-start gap-[32px] py-[32px] w-full">
-          <h2 className="text-2xl">{t("title")}</h2> 
-          <NewsList/>
-      </main>
-  )
+import NewsDataShow from "@/component/blogs/NewsDataShow"
+export default function Page(){
+    return(
+        <main className="flex flex-col py-[32px] items-center justify-start">
+            <NewsDataShow/>
+        </main>
+    )
 }

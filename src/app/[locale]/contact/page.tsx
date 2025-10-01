@@ -1,24 +1,36 @@
 import ContactForm from "@/component/contact/contactForm";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+
+import type { Metadata } from "next";
+
+type Props = {
+  params: Promise<{ locale: string }>;
+};
+
+async function loadMessages(locale: string) {
+  return (await import(`@/data/${locale}/meta.json`)).default;
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata>{
+  const { locale } = await params;
+  const messages = await loadMessages(locale);
+  return{
+    title: messages.contact.title,
+    openGraph:{
+      title:messages.contact.title,
+    }
+  }
+}
+
+
 export default function Contact(){
     const t = useTranslations("contact");
     return (
         <main className="flex flex-col w-full items-center justify-start py-[32px] gap-[32px]">
-            <div className="flex flex-col-reverse lg:flex-row items-start justify-start w-full gap-[32px] px-[16px] ">
-
-                <article className="lg:basis-4/12 w-full flex flex-col items-center  gap-[16px]">
-                    <h2 className="text-2xl">{t("map")}</h2>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6081.167840182429!2d121.43772772474668!3d25.00405624046243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1szh-TW!2stw!4v1759219587666!5m2!1szh-TW!2stw" className="w-full h-[500px]" allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
-                </article>
-
-                <ContactForm/>
-
-            </div>
-
             <article className=" w-full  flex flex-col items-center justify-start py-[16px] gap-[16px]">
-                <h2 className="text-2xl">{t("information")}</h2>
-                <section className="flex flex-col md:flex-row w-full items-center justify-around p-[16px] md:p-0 gap-[16px]">
+                <h2 className="text-3xl">{t("information")}</h2>
+                <section className="flex flex-col w-full items-center justify-around p-[16px] md:p-0 gap-[16px]">
 
                     <div className="basis-1/2 flex flex-col gap-[16px] items-start md:px-[16px]">
                         <p>{t("contactPosition")}</p>
@@ -37,6 +49,18 @@ export default function Contact(){
                     </div>
                 </section>
             </article>
+            <div className="flex flex-col-reverse lg:flex-row items-start justify-start w-full gap-[32px] px-[16px] ">
+
+                <article className="lg:basis-4/12 w-full flex flex-col items-center  gap-[16px]">
+                    <h2 className="text-2xl">{t("map")}</h2>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6081.167840182429!2d121.43772772474668!3d25.00405624046243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1szh-TW!2stw!4v1759219587666!5m2!1szh-TW!2stw" className="w-full h-[500px]" allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                </article>
+
+                <ContactForm/>
+
+            </div>
+
+           
 
         </main>
     )

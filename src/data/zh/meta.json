@@ -1,0 +1,17 @@
+{
+    "index":{
+        "title":"艾拉官網-首頁"
+    },
+    "aboutUs":{
+        "title":"艾拉官網-關於我們"
+    },
+    "blog":{
+        "title":"艾拉官網-最新消息"
+    },
+    "products":{
+        "title":"艾拉官網-作品介紹"
+    },
+    "contact":{
+        "title":"艾拉官網-聯繫我們"
+    }
+}

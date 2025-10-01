@@ -1,6 +1,29 @@
 import { useTranslations } from "next-intl";
 import OurTeam from "@/component/aboutUs/OurTeam";
 import HisComponent from "@/component/aboutUs/HisComponent";
+
+import type { Metadata } from "next";
+
+type Props = {
+  params: Promise<{ locale: string }>;
+};
+
+async function loadMessages(locale: string) {
+  return (await import(`@/data/${locale}/meta.json`)).default;
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata>{
+  const { locale } = await params;
+  const messages = await loadMessages(locale);
+  return{
+    title: messages.aboutUs.title,
+    openGraph:{
+      title:messages.aboutUs.title,
+    }
+  }
+}
+
+
 export default function AboutUs(){
     const t = useTranslations("aboutus");
     const his :{date:string,description:string}[] = t.raw("history");
